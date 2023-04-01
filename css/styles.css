@@ -1,0 +1,320 @@
+*{
+    box-sizing: border-box;
+}
+/* GENERAL */
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+html{
+    height: 100%;
+    box-sizing: border-box;
+}
+img{
+    display: block;
+    height: auto;
+}
+body{
+    display: flex;
+    flex-direction: column; 
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    background-image: url("../images/back-to-future.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* VISUALLY-HIDDEN */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* CONTAINER */
+.container{
+    max-width: 1240px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+/* STICKY-FOOTER */
+.site-main{
+    flex-grow: 1;
+}
+
+/* Box start */
+
+.box__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+}
+
+.box__title {
+    margin-bottom: 50px;
+    font-size: 65px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.box__link , .modal__link {
+    padding: 10px 60px;
+    font-size: 25px;
+    color: #fff;
+    background-color: #000;
+    box-shadow: 0px 0px 5px 3px #fff;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.modal__link {
+    padding: 5px 60px;
+}
+
+.box__link:hover {
+    background-color: #fff;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 0 #68daff;
+    color: #000;
+}
+
+.modal__link:hover {
+    background-color: #fff;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 0 #68daff;
+    color: #000;
+}
+
+/* Modal start */
+
+.modal__box {
+    display: none;
+    padding-top: 150px;
+}
+
+.modal__wrapper {
+    padding: 40px;
+    border-radius: 20px;
+    background-color: #000;
+    box-shadow: 0px 0px 4px 7px #fff;
+    cursor: pointer;
+}
+
+.form-select {
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: #5f515141;
+    box-shadow: 0 2px 20px #a8a6a6;
+    border: 1px solid #5f515141;
+    color: #fff;
+    border: none;
+}
+
+.form-select:focus {
+    background-color: #000;
+    box-shadow: 0 2px 30px #a8a6a6;
+}
+
+/* Modal end */
+
+/* Box end */
+
+/* Services start */
+
+.services {
+    display: none;
+}
+
+.services__info {
+    max-width: 1180px;
+    width: 100%;
+}
+
+.services__wrapper {
+    max-width: 1180px;
+    width: 100%;
+    padding: 20px;
+    background-color: #424040;
+    border-radius: 4px; 
+}
+
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+
+.services__title {
+    font-size: 18px;
+    color: #fff;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+}
+
+.item-js {
+    opacity: 0.1;
+}
+
+.services__img {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    background-color: #918e8e;
+    border-radius: 6px;
+    object-fit: contain;
+}
+
+.img-js {
+    background-color: green;
+    animation: horizontal-shaking 0.5s ease-in-out;
+}
+
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(7px) }
+    50% { transform: translateX(-7px) }
+    75% { transform: translateX(7px) }
+    100% { transform: translateX(0) }
+}
+
+.error-js {
+    background-color: red;
+    animation: horizontal-shaking 0.5s ease-in-out;
+}
+
+/* Game Over start */
+
+.modal__gameover {
+    display: none; 
+    height: 100vh;
+    width: 100%;
+    background-image: url("../images/Game-Over.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.gameover__images {
+    padding-top: 200px;
+}
+
+.gameover__img {
+    max-width: 623px;
+    width: 100%;
+}
+
+.gameover__btn {
+    background-image: url("../images/replay.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 60px;
+    height: 60px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+/* Game Over end */
+
+/* Win start */
+
+.modal__win {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../images/youwin.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.win__images {
+    padding-top: 200px;
+}
+
+.win__img {
+    max-width: 623px;
+    width: 100%;
+}
+
+.win__btn {
+    background-image: url("../images/replay1.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 60px;
+    height: 60px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.js__true-img {
+    display: none;
+    position: absolute;
+    top: 184px;
+    left: 120px;
+    background-image: url("../images/checkmark.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}
+
+.img__checkmark {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    display: none;
+}
+
+.img__checkmark-js {
+    display: block;
+}
+
+.img__error {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    display: none;
+}
+
+
+/* Win end */
+
+/* Services end */
+
+
+
