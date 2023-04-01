@@ -329,7 +329,7 @@ body{
         padding: 5px 30px;
         font-size: 20px;
     }
-
+    
     .services__title {
         font-size: 10px;
     }
@@ -346,13 +346,13 @@ body{
         padding: 10px 60px;
         font-size: 25px;
     }
-
+    
     label {
         font-size: 24px;
         max-width: 250px;
         width: 100%;
     }
-
+    
     .services__title {
         font-size: 14px;
     }
@@ -362,6 +362,10 @@ body{
     .services__block {
         max-width: 700px;
         width: 100%;
+    }
+    
+    .box__title {
+        font-size: 65px;
     }
 }
 
