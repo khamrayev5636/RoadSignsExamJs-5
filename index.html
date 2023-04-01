@@ -13,7 +13,6 @@
     <main>
         
         <section class="box">
-            <h1 class="visually-hidden">Yo'l harakat qoidasi</h1>
             <div class="container">
                 <div class="box__wrapper">
                     <h1 class="box__title">
@@ -31,8 +30,8 @@
         <section class="services mt-5">
             <h2 class="visually-hidden">Yo'l harakat qoidasi</h2>
             <div class="container">
-                <div class="services__info d-flex justify-content-between mb-3">
-                    <div class="services__block d-flex justify-content-between w-75">
+                <div class="services__info d-flex flex-column flex-md-row justify-content-md-between mb-3">
+                    <div class="services__block d-lg-flex justify-content-lg-between">
                         <p class="fs-5 text-white text-uppercase my-0">
                             urinishlar soni :
                             <span class="services__count fs-5 text-white">0</span>
@@ -67,8 +66,8 @@
     <div class="modal__box">
         <div class="container">
             <div class="modal__wrapper">
-                <form class="modal__form d-flex justify-content-center mb-5">
-                    <label for="level" class="w-25 me-5 fs-5 text-white text-uppercase">
+                <form class="modal__form d-flex flex-column align-items-center flex-md-row justify-content-md-center mb-5">
+                    <label for="level" class="mb-5 text-white text-uppercase mb-md-0 me-md-5">
                         Darajani tanlang
                         <select class="form-select modal__level mt-4" id="level" aria-label="modal level">
                             <option value="easy">Oson</option>
@@ -76,7 +75,7 @@
                             <option value="hard">Qiyin</option>
                         </select>
                     </label>
-                    <label for="time" class="w-25 ms-5 fs-5 text-white text-uppercase">
+                    <label for="time" class="text-white text-uppercase ms-md-5">
                         Vaqtni tanlang
                         <select class="form-select modal__time mt-4" id="time" aria-label="modal time">
                             <option value="3">3 min</option>
