@@ -147,6 +147,10 @@ function gameOver() {
 function roadWin() {
     elWin.classList.add("d-block");
     elServices.classList.add("d-none");
+
+    let audioWin = new Audio (("./audios/audio-win.mp3"))
+
+    audioWin.play()
     
     elWinCount.textContent = `Urinishlar soni: ${count}`
     elWinScore.textContent = `Bali: ${point}`
@@ -222,7 +226,7 @@ elList.addEventListener("click" , evt => {
             // Orqa rangini bo'yash
             
             const itemBg = evt.target;
-            itemBg.classList.add("img-js");
+            itemBg.parentElement.classList.add("item-js");
             let audio = new Audio ("./audios/audios.mp3");
             audio.play()
             setTimeout(() => {
@@ -230,25 +234,24 @@ elList.addEventListener("click" , evt => {
             }, 1000);
             setTimeout(() => {
                 const itemRemove = evt.target
-                itemRemove.classList.add("item-js");
-                itemBg.classList.remove("img-js")
-            }, 1200);
+                itemRemove.parentElement.classList.remove("item-js");
+                itemBg.classList.add("img-js")
+            }, 1000);
             point += 2
             elScore.textContent = point;
             
             
         } else {
             const errorImg = evt.target;
-            errorImg.classList.add("error-js");
-            let audio = new Audio(("./audios/erors.mp3"));
+            errorImg.parentElement.classList.add("error-js");
+            let audio = new Audio(("./audios/error-voice.mp3"));
             audio.play()
             setTimeout(() => {
-                errorImg.classList.remove("error-js")
+                errorImg.parentElement.classList.remove("error-js")
             }, 1000);
             point--
             elScore.textContent = point;
-            
-            
+    
             attemp--
             elAttemp.textContent = attemp
             setTimeout(() => {
